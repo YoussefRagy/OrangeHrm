@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="OrangeHRM Automation Suite" verbose="1">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
+    <test name="OrangeHRM Regression">
+        <classes>
+            <class name="tests.EmployeeCreationTest"/>
+            <class name="tests.PersonalInfoUpdateTest"/>
+            <class name="tests.EmergencyContactsTest"/>
+            <class name="tests.TimesheetApprovalTest"/>
+            <class name="tests.EmployeeReportTest"/>
+        </classes>
+    </test>
+</suite>
