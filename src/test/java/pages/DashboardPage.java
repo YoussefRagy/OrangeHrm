@@ -23,7 +23,9 @@ public class DashboardPage {
     }
 
     public void navigateToModule(String moduleName) {
-        By locator = By.xpath(String.format("//span[@class='oxd-main-menu-item--name' and text()='%s']", moduleName));
+        By locator = By.xpath(String.format(
+                "//a[contains(@class,'oxd-main-menu-item')]//span[contains(@class,'oxd-main-menu-item--name') and normalize-space()='%s']",
+                moduleName));
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
     }
 
